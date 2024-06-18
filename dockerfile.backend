@@ -1,0 +1,47 @@
+FROM node:lts-alpine3.20 as base
+
+ENV YARN_VERSION=4.3.0
+
+RUN apk update && apk upgrade && apk add --no-cache libc6-compat && apk add dumb-init
+
+RUN corepack enable && corepack prepare yarn@${YARN_VERSION}
+
+FROM base as builder
+
+WORKDIR /app
+
+COPY yarn.lock .
+
+COPY package.json .
+
+COPY .yarnrc.yml .
+
+COPY .yarn .yarn
+
+COPY ./packages/backend packages/backend/
+
+RUN yarn install 
+
+RUN yarn workspace backend prepare
+
+RUN yarn build:backend
+
+FROM base as runner
+
+WORKDIR /app
+
+COPY --from=builder /app/packages/backend/dist .
+
+COPY --from=builder /app/packages/backend/package.json .
+
+COPY --from=builder /app/yarn.lock .
+
+COPY --from=builder /app/.yarnrc.yml .
+
+COPY --from=builder /app/.yarn .yarn
+
+RUN yarn workspaces focus --production
+
+EXPOSE 8000
+
+CMD [ "node", "main.js" ]
