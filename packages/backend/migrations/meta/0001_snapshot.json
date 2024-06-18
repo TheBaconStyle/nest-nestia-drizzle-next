@@ -1,0 +1,45 @@
+{
+  "id": "3b5407ba-99fb-4060-90e7-65c5f5ae35d2",
+  "prevId": "f49a828d-f67b-46b4-9d31-2594d2d8f583",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "umbridge.users": {
+      "name": "users",
+      "schema": "umbridge",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {
+    "umbridge": "umbridge"
+  },
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

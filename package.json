@@ -1,5 +1,5 @@
 {
-  "name": "umbridge-monorepo",
+  "name": "nest-nestia-drizzle-next",
   "packageManager": "yarn@4.3.0",
   "private": true,
   "workspaces": [
@@ -10,6 +10,8 @@
     "dev:frontend": "yarn workspace frontend dev",
     "build:backend": "yarn workspace backend build",
     "build:frontend": "yarn workspace frontend build",
+    "build:sdk": "yarn workspace sdk build",
+    "build:swagger": "yarn workspace backend swagger",
     "start:backend": "yarn workspace backend start",
     "start:frontend": "yarn workspace frontend start",
     "dev": "yarn workspaces foreach -A -p -i run dev",

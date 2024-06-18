@@ -1,0 +1,97 @@
+version: "3.9"
+
+name: umbridge-le
+
+services:
+  # postgres:
+  #   image: postgres:alpine3.20
+  #   volumes:
+  #     - umbridge_postgres:/var/lib/postgresql/data
+  #   environment:
+  #     POSTGRES_DB: "umbridge"
+  #     POSTGRES_USER: "postgres"
+  #     POSTGRES_PASSWORD: "postgres"
+  #   # ports:
+  #   #   - 5432:5432
+  #   healthcheck:
+  #     test: "exit 0"
+  #   networks:
+  #     - umbridge_net
+
+  # pgadmin:
+  #   image: dpage/pgadmin4:8.4
+  #   volumes:
+  #     - umbridge_pgadmin:/var/lib/pgadmin
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: "qwe@qwe.qwe"
+  #     PGADMIN_DEFAULT_PASSWORD: "qwerty123"
+  #   ports:
+  #     - 5500:80
+  #     # - 443:443
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - umbridge_net
+
+  # keycloak:
+  #   image: quay.io/keycloak/keycloak
+  #   command: start-dev
+  #   environment:
+  #     KC_DB: postgres
+  #     KC_DB_URL_HOST: postgres
+  #     KC_DB_URL_DATABASE: umbridge
+  #     KC_DB_USERNAME: "postgres"
+  #     KC_DB_PASSWORD: "postgres"
+  #     KC_DB_SCHEMA: keycloak
+  #     KEYCLOAK_ADMIN: admin
+  #     KEYCLOAK_ADMIN_PASSWORD: admin
+  #   ports:
+  #     - 8080:8080
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - umbridge_net
+
+  # backend:
+  #   image: umbridge-backend:latest
+  #   environment:
+  #     PORT: 8000
+  #     DB_HOST: postgres
+  #     DB_PORT: 5432
+  #     DB_USERNAME: postgres
+  #     DB_PASSWORD: postgres
+  #     DB_NAME: umbridge
+  #     DB_SYNC: false
+  #     DB_ENTITIES: dist/**/*.entity.js
+  #     DB_MIGRATIONS: dist/**/migrations/*.js
+  #     SALT_ROUNDS: 12
+  #     NODE_ENV: production
+  #   ports:
+  #     - 8000:8000
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - umbridge_net
+
+  frontend:
+    image: umbridge-frontend
+    environment:
+      PORT: 3000
+      API_URL: http://backend:8000
+      AUTH_SECRET: hOgoRQI9+WTmJTY7cWedDCKg7FahH44IpvNTibVvUJY=
+    # depends_on:
+    #   - backend
+    ports:
+      - 3000:3000
+    networks:
+      - umbridge_net
+
+networks:
+  umbridge_net:
+    driver: bridge
+
+volumes:
+  umbridge_postgres:
+    external: true
+  umbridge_pgadmin:
+    external: true

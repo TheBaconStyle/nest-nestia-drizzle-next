@@ -1,0 +1,12 @@
+.git
+.vscode
+**/.gitignore
+**/.eslintrc.js
+**/README.md
+**/node_modules
+**/dist
+**/.next
+**/.gitattributes
+**/.prettierrc
+**/.editorconfig
+**/.env*
