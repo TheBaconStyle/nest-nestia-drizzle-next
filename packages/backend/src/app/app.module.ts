@@ -8,7 +8,7 @@ import { DB_TAG } from '@/database/config'
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
+    ConfigModule.forRoot({ isGlobal: true, envFilePath: '.env.local' }),
     DrizzlePGModule.registerAsync({
       tag: DB_TAG,
       imports: [ConfigModule],
