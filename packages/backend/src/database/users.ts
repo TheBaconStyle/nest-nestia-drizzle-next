@@ -1,8 +1,8 @@
 import { uuid, varchar } from 'drizzle-orm/pg-core'
-import { umbridgeSchema } from './schema'
+import { exampleSchema } from './schema'
 
-export const users = umbridgeSchema.table('users', {
-  id: uuid('id').primaryKey(),
+export const users = exampleSchema.table('users', {
+  id: uuid('id').default('gen_random_uuid()').primaryKey(),
   email: varchar('email').notNull(),
   password: varchar('password').notNull(),
   firstName: varchar('firstName'),

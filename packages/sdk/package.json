@@ -27,13 +27,17 @@
     "README.md"
   ],
   "devDependencies": {
+    "@nestia/sdk": "^3.2.5",
+    "nestia": "^5.3.0",
     "rimraf": "^5.0.7",
     "ts-node": "^10.9.2",
     "ts-patch": "^3.2.0",
-    "typescript": "^5.4.2"
+    "typescript": "5.4.2"
   },
   "dependencies": {
-    "@nestia/fetcher": "^3.2.1",
-    "typia": "^6.0.3"
+    "@nestia/core": "^3.2.5",
+    "@nestia/e2e": "^0.6.0",
+    "@nestia/fetcher": "^3.2.5",
+    "typia": "^6.2.1"
   }
 }

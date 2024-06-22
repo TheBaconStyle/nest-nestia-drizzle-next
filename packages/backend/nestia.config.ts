@@ -16,6 +16,7 @@ const NESTIA_CONFIG: INestiaConfig = {
   simulate: true,
   assert: true,
   clone: true,
+  propagate: true,
 }
 
 export default NESTIA_CONFIG

@@ -1665,11 +1665,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestia/core@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "@nestia/core@npm:3.2.1"
+"@nestia/core@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@nestia/core@npm:3.2.5"
   dependencies:
-    "@nestia/fetcher": "npm:^3.2.1"
+    "@nestia/fetcher": "npm:^3.2.5"
     "@nestjs/common": "npm:>=7.0.1"
     "@nestjs/core": "npm:>=7.0.1"
     "@samchon/openapi": "npm:^0.1.21"
@@ -1685,44 +1685,58 @@ __metadata:
     typia: "npm:^6.0.3"
     ws: "npm:^7.5.3"
   peerDependencies:
-    "@nestia/fetcher": ">=3.2.1"
+    "@nestia/fetcher": ">=3.2.5"
     "@nestjs/common": ">=7.0.1"
     "@nestjs/core": ">=7.0.1"
     reflect-metadata: ">=0.1.12"
     rxjs: ">=6.0.3"
     typia: ">=6.0.3 <7.0.0"
-  checksum: 10c0/2dd1d891ea5c59eda6a90b5b53cd306605eafd0eafa55062b0fad9caea6cf50c88ffafcf38577944fa5badbca3d8744f434b82430637ad64f40a6f5f5145a402
+  checksum: 10c0/6b8b80a720fd3785ac5e597118268b2ff8d64fafb60e91f92dcf9a5b91449d116df65824aeb1a0f68833c435276970f69316e094c17bd5660d41ae1ebd4e9b0e
   languageName: node
   linkType: hard
 
-"@nestia/e2e@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "@nestia/e2e@npm:0.4.3"
+"@nestia/e2e@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@nestia/e2e@npm:0.6.0"
   dependencies:
+    "@nestia/fetcher": "npm:^3.2.2"
     chalk: "npm:^4.1.2"
     cli: "npm:^1.0.1"
+    tgrid: "npm:^1.0.1"
     tstl: "npm:^3.0.0"
-  checksum: 10c0/522c7152a88190582d4e680f582723ac16bac4e91f4a9146662ca122b505a8e94dc67341d743f6f2bf5d6d585a12756d8b52d4bf508c05ed78f2426ac1c54508
+  checksum: 10c0/171a1248c71ed9f4818a07dde827f192ccb8e43d64ba6bb7c947d4ed2000a06d4184d21373ef4280b4031afce3f091edec050f437464a1695cd7199e6f008ff9
   languageName: node
   linkType: hard
 
-"@nestia/fetcher@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "@nestia/fetcher@npm:3.2.1"
+"@nestia/fetcher@npm:^3.2.2":
+  version: 3.2.3
+  resolution: "@nestia/fetcher@npm:3.2.3"
   dependencies:
     import2: "npm:^1.0.3"
     node-fetch: "npm:^2.6.7"
   peerDependencies:
     typescript: ">= 4.8.0"
-  checksum: 10c0/ba0df4d22ee4bef4957a84176ed9276746215275ec444dd8108da742176f17d7490d943d8b9f42b1debb079f429006a66ec1dbbfdba49d2e17e79c1418484cd6
+  checksum: 10c0/aebec0b7a7336d84a6a6e1489c1c6ad524c465295ddac04642378972bcbff18a6f63652e6ae3cdd54740c72bdaaf62caaaca41598350c7a2bcb711cfed12ce34
   languageName: node
   linkType: hard
 
-"@nestia/sdk@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "@nestia/sdk@npm:3.2.1"
+"@nestia/fetcher@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@nestia/fetcher@npm:3.2.5"
   dependencies:
-    "@nestia/fetcher": "npm:^3.2.1"
+    import2: "npm:^1.0.3"
+    node-fetch: "npm:^2.6.7"
+  peerDependencies:
+    typescript: ">= 4.8.0"
+  checksum: 10c0/476bbf4fb187ec2df4890539cd39d116cf9ef018adadfbceed2143137332ae36a6630160ca7bfc346f2177635ecd4f506f979d1a31a5153fbd56a904af4514fd
+  languageName: node
+  linkType: hard
+
+"@nestia/sdk@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "@nestia/sdk@npm:3.2.5"
+  dependencies:
+    "@nestia/fetcher": "npm:^3.2.5"
     "@samchon/openapi": "npm:^0.1.21"
     cli: "npm:^1.0.1"
     get-function-location: "npm:^2.0.0"
@@ -1735,7 +1749,7 @@ __metadata:
     tstl: "npm:^3.0.0"
     typia: "npm:^6.0.3"
   peerDependencies:
-    "@nestia/fetcher": ">=3.2.1"
+    "@nestia/fetcher": ">=3.2.5"
     "@nestjs/common": ">=7.0.1"
     "@nestjs/core": ">=7.0.1"
     reflect-metadata: ">=0.1.12"
@@ -1743,7 +1757,7 @@ __metadata:
     typia: ">=6.0.3 <7.0.0"
   bin:
     sdk: lib/executable/sdk.js
-  checksum: 10c0/fbd2a82a00c57e6c3b19ca3bf474ee12c0cedbaa6c32c6cdedd7e14e0714464b9fbd0a110d6013c2fa9e67347fe1f6904e2516344b19721c29dbfd88378a2ec0
+  checksum: 10c0/416570132bea9e4eab18265dd11edb5960fd7e16419e2e24c192a03c12ea2ba43edf4c415c8eb67bb31d6bf9e112eda0fc42904ca93b9c2cb094fc916d1c73a9
   languageName: node
   linkType: hard
 
@@ -3469,10 +3483,10 @@ __metadata:
   resolution: "backend@workspace:packages/backend"
   dependencies:
     "@knaadh/nestjs-drizzle-pg": "npm:^1.0.0"
-    "@nestia/core": "npm:^3.2.1"
-    "@nestia/e2e": "npm:^0.4.3"
-    "@nestia/fetcher": "npm:^3.2.1"
-    "@nestia/sdk": "npm:^3.2.1"
+    "@nestia/core": "npm:^3.2.5"
+    "@nestia/e2e": "npm:^0.6.0"
+    "@nestia/fetcher": "npm:^3.2.5"
+    "@nestia/sdk": "npm:^3.2.5"
     "@nestjs/cli": "npm:^10.0.0"
     "@nestjs/common": "npm:^10.0.0"
     "@nestjs/config": "npm:^3.2.2"
@@ -3508,8 +3522,8 @@ __metadata:
     ts-node: "npm:^10.9.2"
     ts-patch: "npm:^3.2.0"
     tsconfig-paths: "npm:^4.2.0"
-    typescript: "npm:^5.4.2"
-    typia: "npm:^6.1.0"
+    typescript: "npm:5.4.2"
+    typia: "npm:^6.2.1"
     zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
@@ -9296,12 +9310,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sdk@workspace:packages/sdk"
   dependencies:
-    "@nestia/fetcher": "npm:^3.2.1"
+    "@nestia/core": "npm:^3.2.5"
+    "@nestia/e2e": "npm:^0.6.0"
+    "@nestia/fetcher": "npm:^3.2.5"
+    "@nestia/sdk": "npm:^3.2.5"
+    nestia: "npm:^5.3.0"
     rimraf: "npm:^5.0.7"
     ts-node: "npm:^10.9.2"
     ts-patch: "npm:^3.2.0"
-    typescript: "npm:^5.4.2"
-    typia: "npm:^6.0.3"
+    typescript: "npm:5.4.2"
+    typia: "npm:^6.2.1"
   languageName: unknown
   linkType: soft
 
@@ -9960,6 +9978,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tgrid@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "tgrid@npm:1.0.1"
+  dependencies:
+    "@types/node": "npm:^20.11.30"
+    "@types/websocket": "npm:^1.0.10"
+    "@types/ws": "npm:^7.4.7"
+    import2: "npm:^1.0.3"
+    tstl: "npm:3.0.0"
+    ws: "npm:^7.5.3"
+  checksum: 10c0/d5b2e2a249d7411cea296d1c3d15163601ae6f4c4b0c9340802d8c983644471b1babae533578ad68657ee526464998e79f6093e3084c6cc3f67f72eff4ee2d69
+  languageName: node
+  linkType: hard
+
 "through@npm:^2.3.6":
   version: 2.3.8
   resolution: "through@npm:2.3.8"
@@ -10323,7 +10355,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5, typescript@npm:^5.4.2":
+"typescript@npm:5.4.2":
+  version: 5.4.2
+  resolution: "typescript@npm:5.4.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/583ff68cafb0c076695f72d61df6feee71689568179fb0d3a4834dac343df6b6ed7cf7b6f6c801fa52d43cd1d324e2f2d8ae4497b09f9e6cfe3d80a6d6c9ca52
+  languageName: node
+  linkType: hard
+
+"typescript@npm:^5":
   version: 5.4.5
   resolution: "typescript@npm:5.4.5"
   bin:
@@ -10343,7 +10385,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.2#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>":
+  version: 5.4.2
+  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10c0/fcf6658073d07283910d9a0e04b1d5d0ebc822c04dbb7abdd74c3151c7aa92fcddbac7d799404e358197222006ccdc4c0db219d223d2ee4ccd9e2b01333b49be
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>":
   version: 5.4.5
   resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
   bin:
@@ -10353,7 +10405,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typia@npm:^6.0.3, typia@npm:^6.1.0":
+"typia@npm:^6.0.3":
   version: 6.1.0
   resolution: "typia@npm:6.1.0"
   dependencies:
@@ -10367,6 +10419,23 @@ __metadata:
   bin:
     typia: lib/executable/typia.js
   checksum: 10c0/35e473230e5ee7743a3162f2f80af7f044b3e1953e77b276347ba9b50bcca73fdb98c59e8edb4e0c71ed81dfdd4155edddde28e9df5a9aa4455fdbb57730577f
+  languageName: node
+  linkType: hard
+
+"typia@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "typia@npm:6.2.1"
+  dependencies:
+    "@samchon/openapi": "npm:0.1.22"
+    commander: "npm:^10.0.0"
+    comment-json: "npm:^4.2.3"
+    inquirer: "npm:^8.2.5"
+    randexp: "npm:^0.5.3"
+  peerDependencies:
+    typescript: ">=4.8.0 <5.5.0"
+  bin:
+    typia: lib/executable/typia.js
+  checksum: 10c0/88717ce70be43ad20e6ced65b1fb7fe84b506bb53f2716c528f36548c49cd3670b7a49082a53897da0367745dc267ed8492956d5b0933f169ab0bfdf2be83bea
   languageName: node
   linkType: hard
 

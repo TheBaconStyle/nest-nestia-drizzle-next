@@ -1,4 +1,4 @@
-import { TypedRoute } from '@nestia/core'
+import { TypedParam, TypedRoute } from '@nestia/core'
 import { Controller } from '@nestjs/common'
 import { AppService } from './app.service'
 
@@ -6,8 +6,9 @@ import { AppService } from './app.service'
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @TypedRoute.Get()
-  async getHello() {
-    return await this.appService.getHello()
+  @TypedRoute.Get(':param')
+  async getHello(@TypedParam('param') param: string) {
+    console.log(param)
+    return `Hello, ${param}`
   }
 }

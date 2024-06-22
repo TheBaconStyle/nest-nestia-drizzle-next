@@ -13,5 +13,6 @@ export class AppService {
     return this.drizzleDb.query.users.findMany({
       columns: { email: true, password: true },
     })
+    // return 'qweqweqwe'
   }
 }

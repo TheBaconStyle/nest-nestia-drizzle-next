@@ -1,4 +1,4 @@
-import { IConnection } from "@nestia/fetcher"
+import { IConnection } from '@nestia/fetcher'
 
 export const ApiConfig: IConnection = {
   host: process.env.API_URL as string,
